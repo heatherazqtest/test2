@@ -1,0 +1,29 @@
+
+module.exports = {
+
+  /**
+   * @name convertFtoC
+   * @param {number} Fahrenheit
+   * @return {number} Celsius
+   */
+  convertFtoC(req, res) {
+    let Fahrenheit = req.body.data.Fahrenheit;
+
+    res.send({
+      Celsius: (Fahrenheit - 32) * 5 / 9,
+    });
+  },
+  
+    /**
+   * @name convertCtoF
+   * @param {number} Celsius
+   * @return {number} Fahrenheit
+   */
+  convertCtoF(req, res) {
+    let Celsius = req.body.data.Cdeg;
+
+    res.send({
+      Fahrenheit: Celsius * 9 / 5 + 32,
+    });
+  },
+}
